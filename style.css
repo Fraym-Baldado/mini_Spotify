@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
+}
+
+body{
+    background:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding:15px;
+}
+
+/* LOGIN */
+.login{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:grid;
+    place-items:center;
+}
+
+.box{
+    width:100%;
+    max-width:340px;
+    background:#132129;
+    color:#fff;
+    padding:25px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.box input,
+.box button{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:30px;
+}
+
+.box button{
+    background:#1db954;
+    color:#fff;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.error{
+    color:#ff6b6b;
+    margin-top:10px;
+}
+
+/* APP */
+.app{
+    width:100%;
+    max-width:650px;
+    padding:14px;
+    border-radius:35px;
+    background:linear-gradient(135deg,#08131d,#17313c,#2ecc71);
+    color:#fff;
+}
+
+/* HEADER */
+header,
+.player,
+.playlist{
+    background:rgba(0,0,0,.22);
+    border-radius:28px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#1ed760;
+}
+
+.logout{
+    background:#1db954;
+    color:#fff;
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:20px;
+}
+
+/* PLAYER */
+.now{
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+#cover{
+    width:180px;
+    height:180px;
+    border-radius:22px;
+    object-fit:cover;
+}
+
+.info{flex:1;}
+
+.controls{
+    display:flex;
+    gap:12px;
+    margin:15px 0;
+}
+
+.controls button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    cursor:pointer;
+}
+
+#play{
+    width:72px;
+    height:72px;
+    background:#1db954;
+}
+
+/* PROGRESS */
+.progress{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.progress input{width:100%;}
+
+/* AD */
+.ad{
+    margin-top:15px;
+    padding:10px;
+    background:#1db954;
+    border-radius:12px;
+    text-align:center;
+}
+
+/* PLAYLIST */
+.song{
+    display:flex;
+    gap:12px;
+    padding:10px;
+    border-radius:16px;
+    background:rgba(255,255,255,.08);
+    margin-bottom:10px;
+    cursor:pointer;
+}
+
+.song:hover,
+.active{
+    background:#1db954;
+}
+
+.song img{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .now{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    #cover{
+        width:190px;
+        height:190px;
+    }
+
+    .controls{
+        justify-content:center;
+    }
+
+    .controls button{
+        width:48px;
+        height:48px;
+    }
+
+    #play{
+        width:65px;
+        height:65px;
+    }
+}
